@@ -20,7 +20,7 @@ import { RouterLink, RouterView } from "vue-router";
               <RouterLink class="nav-link" to="/about">Records</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link sign-out" to="/about">Sign Out</RouterLink>
+              <a href="#" class="nav-link sign-out" @click.prevent="handleLogout">Sign Out</a>
             </li>
           </ul>
         </div>
@@ -59,8 +59,13 @@ export default {
   },
   methods: {
     ...mapActions({
-      clearAlert: 'alert/clear'
-    })
+      clearAlert: 'alert/clear',
+      logout: 'account/logout'
+    }),
+    handleLogout (e) {
+      this.logout();
+      location.reload(true);
+    }
   },
   watch: {
     $route (to, from){

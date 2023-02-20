@@ -29,27 +29,27 @@ const actions = {
 };
 
 const mutations = {
-    loginRequest(state, user) {
-        state.status = { loggingIn: true };
-        state.user = user;
-    },
-    loginSuccess(state, user) {
-        state.status = { loggedIn: true };
-        state.user = user;
-    },
-    loginFailure(state) {
-        state.status = {};
-        state.user = null;
-    },
-    logout(state) {
-        state.status = {};
-        state.user = null;
-    }
+  loginRequest(state, user) {
+    state.status = { loggingIn: true };
+    state.user = user;
+  },
+  loginSuccess(state, user) {
+    state.status = { loggedIn: true };
+    state.user = user;
+  },
+  loginFailure(state) {
+    state.status = {};
+    state.user = null;
+  },
+  logout(state) {
+    state.status = {};
+    state.user = null;
+  }
 };
 
 export const account = {
-    namespaced: true,
-    state,
-    actions,
-    mutations
+  namespaced: true,
+  state,
+  actions,
+  mutations
 };
