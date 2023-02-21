@@ -30,7 +30,7 @@ export default {
     return {
       operand_a: 0,
       operand_b: 0,
-      userOperation: 1,
+      userOperation: '1',
       response: ''
     }
   },
