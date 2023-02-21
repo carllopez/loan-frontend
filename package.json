@@ -8,9 +8,10 @@
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "start": "vite"
+    "start": "serve dist"
   },
   "dependencies": {
+    "serve": "^14.2.0",
     "vue": "^3.2.36",
     "vue-router": "^4.1.6",
     "vuex": "^4.0.2"
