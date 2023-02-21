@@ -17,7 +17,7 @@ function addition(operand_a, operand_b) {
         body: JSON.stringify({ operand_a, operand_b, operation })
     };
 
-    return fetch('http://localhost:8000/calculator/operation/', requestOptions)
+    return fetch(`${import.meta.env.VITE_API_URL}/calculator/operation/`, requestOptions)
         .then(handleResponse)
         .then(response => {
             if (response.result) {
@@ -34,7 +34,7 @@ function subtract(operand_a, operand_b) {
         body: JSON.stringify({ operand_a, operand_b, operation })
     };
 
-    return fetch('http://localhost:8000/calculator/operation/', requestOptions)
+    return fetch(`${import.meta.env.VITE_API_URL}/calculator/operation/`, requestOptions)
         .then(handleResponse)
         .then(response => {
             if (response.result) {
@@ -51,7 +51,7 @@ function multiplication(operand_a, operand_b) {
         body: JSON.stringify({ operand_a, operand_b, operation })
     };
 
-    return fetch('http://localhost:8000/calculator/operation/', requestOptions)
+    return fetch(`${import.meta.env.VITE_API_URL}/calculator/operation/`, requestOptions)
         .then(handleResponse)
         .then(response => {
             if (response.result) {
@@ -68,7 +68,7 @@ function division(operand_a, operand_b) {
         body: JSON.stringify({ operand_a, operand_b, operation })
     };
 
-    return fetch('http://localhost:8000/calculator/operation/', requestOptions)
+    return fetch(`${import.meta.env.VITE_API_URL}/calculator/operation/`, requestOptions)
         .then(handleResponse)
         .then(response => {
             if (response.result) {
@@ -85,7 +85,7 @@ function square_root(operand_a) {
         body: JSON.stringify({ operand_a, operation })
     };
 
-    return fetch('http://localhost:8000/calculator/operation/', requestOptions)
+    return fetch(`${import.meta.env.VITE_API_URL}/calculator/operation/`, requestOptions)
         .then(handleResponse)
         .then(response => {
             if (response.result) {
@@ -102,7 +102,7 @@ function random_string() {
         body: JSON.stringify({ operation })
     };
 
-    return fetch('http://localhost:8000/calculator/operation/', requestOptions)
+    return fetch(`${import.meta.env.VITE_API_URL}/calculator/operation/`, requestOptions)
         .then(handleResponse)
         .then(response => {
             if (response.result) {
